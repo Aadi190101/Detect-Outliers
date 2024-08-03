@@ -2,11 +2,11 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# dataset=[11,10,12,14,12,15,14,13,15,102,12.14,17,19,107,10,13,12,14,12,108,12,11,14,13,15,10,15,12,10,14,13,15,10]
+dataset=[11,10,12,14,12,15,14,13,15,102,12.14,17,19,107,10,13,12,14,12,108,12,11,14,13,15,10,15,12,10,14,13,15,10]
 outliers = []
 
 
-# 1st Method
+# 1st Method(using z-score)
 def detect_out(data):
     threshold = 3
     mean = np.mean(data)
@@ -21,7 +21,7 @@ def detect_out(data):
 
 print(detect_out(dataset))
 
-# 2nd Method
+# 2nd Method(using percentile)
 dataset1 = sorted(dataset)
 dataset1 = np.sort(dataset)
 Q1, Q3 = np.percentile(dataset1, [25, 75])
