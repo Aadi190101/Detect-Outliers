@@ -18,8 +18,11 @@ def detect_out(data):
             outliers.append(i)
     return outliers
 
-
 print(detect_out(dataset))
+
+sns.boxplot(dataset)
+plt.show()
+
 
 # 2nd Method(using percentile)
 dataset1 = sorted(dataset)
