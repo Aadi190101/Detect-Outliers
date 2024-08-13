@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 dataset=[11,10,12,14,12,15,14,13,15,102,12.14,17,19,107,10,13,12,14,12,108,12,11,14,13,15,10,15,12,10,14,13,15,10]
 outliers = []
 
-
+ 
 # 1st Method(using z-score)
 def detect_out(data):
     threshold = 3
